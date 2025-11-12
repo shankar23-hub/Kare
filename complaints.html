@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complaints | KARE</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="complaints.css">
+</head>
+<body>
+<aside class="sidebar">
+  <h1>KARE SYSTEM</h1>
+  <nav>
+    <ul>
+      <li><a href="index233.html">Dashboard</a></li>
+      <li><a href="complaints.html" class="active">Complaints</a></li>
+      <li><a href="scheduling.html">Scheduling</a></li>
+      <li><a href="whitewash.html">White Wash</a></li>
+      <li><a href="tracking.html">Tracking</a></li>
+      <li><a href="feedbacks.html">Feedbacks</a></li>
+    
+    </ul>
+
+    <hr class="sidebar-divider">
+
+    <ul class="bottom-links">
+      <li><a href="change-password.html">Change Password</a></li>
+      <li><a href="login.html" class="logout">Logout</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="main">
+  <h2>Complaints</h2>
+  <div class="card">
+    <h3>Complaint List</h3>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Block</th><th>Issue</th><th>Priority</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>#432</td><td>Block 8</td><td>Leaking pipe</td><td>High</td><td><span class="status open">Open</span></td></tr>
+        <tr><td>#431</td><td>Block 9</td><td>Broken window</td><td>Medium</td><td><span class="status assigned">Assigned</span></td></tr>
+        <tr><td>#430</td><td>Block 10</td><td>Peeling paint</td><td>Low</td><td><span class="status closed">Closed</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Submit New Complaint</h3>
+    <form>
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name">
+      <label>Block</label>
+      <select>
+        <option>Block 1</option>
+        <option>Block 2</option>
+        <option>Block 3</option>
+        <option>Block 4</option>
+        <option>Block 5</option>
+        <option>Block 6</option>
+        <option>Block 7</option>
+        <option>Block 8</option>
+        <option>Block 9</option>
+        <option>Block 10</option>
+        <option>Block 11</option>
+      </select>
+      <label>Issue Description</label>
+      <textarea placeholder="Describe the issue..."></textarea>
+      <div class="form-actions"><button>Submit</button></div>
+    </form>
+  </div>
+  <div class="footer">© 2025 UBM System</div>
+</main>
+</body>
+</html>

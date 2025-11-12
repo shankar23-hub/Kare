@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.bg-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  z-index: -1;
+}
+
+.auth-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+.auth-container h1 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+  font-size: 16px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.4s;
+}
+
+.auth-form button:hover {
+  background: linear-gradient(90deg, #2196f3, #4caf50);
+}
+
+.auth-form p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-form a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+/* --- Add this new section to your auth.css --- */
+
+/* Wrapper to force the Google button to center and match form width */
+.google-sign-in-wrapper {
+    /* Assuming your form inputs are about 300px wide based on common practices. */
+    max-width: 300px; 
+    margin: 0 auto 15px auto; /* Center it and add space below */
+    padding-bottom: 15px; /* Add a line to visually separate the methods */
+    border-bottom: 1px solid #ccc; 
+}
+
+/* Important: This targets the actual button element (which is an iframe) 
+   and makes it take up the full width of its new wrapper, aligning it. */
+.google-sign-in-wrapper > div {
+    width: 100% !important; 
+    /* The !important may be necessary to override the inline styling Google adds to the iframe */
+}
+
+/* --- Ensure your existing styles are structured like this --- */
+/* Example of existing styles for context/comparison */
+.auth-container {
+    padding: 40px;
+    /* ... other centering/styling properties */
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    /* ... */
+}
+
+.auth-form input,
+.auth-form button {
+    width: 100%; /* Makes form elements take up the full width of the form */
+    max-width: 300px; /* Optional: Sets a max width for the form elements */
+    margin-bottom: 15px;
+    padding: 10px;
+}

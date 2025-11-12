@@ -1,0 +1,220 @@
+/* style.css — Premium 4K University Block Maintenance (Vertical Layout) */
+:root{
+  --bg-dark: #0a0f1a;
+  --bg-gradient: linear-gradient(180deg,#0f1724,#071121);
+  --glass: rgba(255,255,255,0.05);
+  --text: #fff2f4;
+  --muted: rgb(255, 255, 255);
+  --accent1: #60A5FA;
+  --accent2: #6EE7B7;
+  --shadow: 0 12px 48px rgba(0,0,0,0.6);
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  display:flex;
+  min-height:100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar{
+  width:260px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));
+  backdrop-filter: blur(10px);
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:24px 16px;
+  position:fixed;
+  left:0;top:0;bottom:0;
+}
+.sidebar h1{
+  font-size:20px;
+  text-align:center;
+  margin-bottom:26px;
+  color:var(--accent2);
+}
+.sidebar nav ul{
+  list-style:none;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.sidebar nav a{
+  display:block;
+  padding:12px 18px;
+  border-radius:10px;
+  color:var(--muted);
+  text-decoration:none;
+  transition:0.3s;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#041520;
+  font-weight:600;
+}
+
+/* Main Content */
+.main{
+  margin-left:260px;
+  flex:1;
+  padding:36px;
+}
+h2{
+  font-size:28px;
+  margin-bottom:18px;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:16px;
+  padding:24px;
+  box-shadow:var(--shadow);
+  margin-bottom:26px;
+}
+button{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  border:none;
+  color:#041520;
+  font-weight:600;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+}
+button:hover{opacity:0.9}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;color:var(--text)}
+th,td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05)}
+th{color:var(--muted);font-size:14px;text-align:left}
+.status{padding:4px 8px;border-radius:8px;font-size:12px}
+.status.open{background:rgba(255,165,0,0.15);color:#ffb27b}
+.status.assigned{background:rgba(96,165,250,0.15);color:#bde1ff}
+.status.closed{background:rgba(110,231,183,0.15);color:#b6ffe2}
+
+/* Form */
+label{display:block;margin:10px 0 6px;color:var(--muted)}
+input,textarea,select{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid rgb(255, 255, 255);
+  background:rgba(0,0,0,0.2);
+  color:var(--muted);
+  outline:none;
+}
+textarea{min-height:120px}
+.form-actions{margin-top:14px}
+
+/* Footer */
+.footer{text-align:center;color:var(--muted);font-size:14px;margin-top:40px}
+
+/* Responsive */
+@media(max-width:900px){
+  body{flex-direction:column}
+  .sidebar{
+    position:relative;width:100%;flex-direction:row;justify-content:center;
+    padding:10px 0;box-shadow:none;
+  }
+  .sidebar nav ul{flex-direction:row;justify-content:center;flex-wrap:wrap}
+  .main{margin-left:0;padding:20px}
+  h2{font-size:22px}
+}
+/* Divider line between top and bottom sidebar links */
+.sidebar-divider {
+  width: 90%;
+  margin: 18px auto;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Bottom section for Change Password & Logout */
+.bottom-links {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.bottom-links a {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.bottom-links a:hover {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  color: #041520;
+  font-weight: 600;
+}
+
+.logout {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+  color: #fff;
+  font-weight: 600;
+}
+
+.logout:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* Change Password Form Styling */
+.change-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.change-password-form label {
+  font-weight: 600;
+  color: var(--text-color, #f0f0f0);
+}
+
+.change-password-form input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.change-password-form input:focus {
+  outline: none;
+  border-color: var(--accent1, #4ade80);
+  background: rgba(255,255,255,0.1);
+}
+
+.change-password-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, var(--accent2, #22d3ee), var(--accent1, #4ade80));
+  color: #041520;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.change-password-form button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
